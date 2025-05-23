@@ -1,7 +1,51 @@
 .footer {
     width: 100%;
-    background-color: aqua;
+    background: linear-gradient(#010161f3, #0b3975);
     color: white;
     text-align: center;
-    height: 15vh;
+    height: 31.25rem;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+}
+
+.footer * {
+    color: white;
+    text-decoration: none;
+}
+
+.logo-endereco {
+    border: solid;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
+
+}
+
+.logo-img-footer{
+    height: 5rem;
+    width: 350px;
+}
+
+.endereço * {
+    /* border: solid;
+    border-color: brown; */
+    font-size: 17px;
+    text-align: left;
+}
+
+.institucional {
+    border: solid;
+    border-color: black;
+}
+
+.paciente {
+    border: solid;
+    border-color: chartreuse;
+}
+
+.junte_se {
+    border: solid;
+    border-color: blueviolet;
 }

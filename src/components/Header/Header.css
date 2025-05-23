@@ -1,6 +1,29 @@
-.header{
-    background-color: blue;
+.header {
+    background: linear-gradient(#010161f3, #0b3975);
     color: white;
-    text-align: center;
-    height: 15vh;
+    height: 18vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo-img-header{
+    height: 5rem;
+    width: 22.875rem;
+    margin-left: 10%;
+}
+
+.links {
+    margin-right: 10%;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.links a {
+    display: flex;
+    color: white;
+    font-size: 23px;
+    text-decoration: none;
 }

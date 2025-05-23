@@ -7,3 +7,15 @@
 main {
     flex: 1;
 }
+
+.section1 {
+    border: solid;
+    border-color: black;
+    height: 800px;
+}
+
+.section2 {
+    border: solid;
+    border-color: black;
+    height: 800px;
+}

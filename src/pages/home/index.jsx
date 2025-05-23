@@ -10,6 +10,12 @@ const Home = () => (
         </header>
         <main className="home-content">
             <h1>isso é um teste da pagina home</h1>
+            <section className='section1'>
+
+            </section>
+            <section className='section2'>
+
+            </section>
         </main >
         <footer>
             <Footer />
