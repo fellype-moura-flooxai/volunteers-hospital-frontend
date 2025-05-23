@@ -1,7 +1,9 @@
+import Home from './pages/home/index'
+
 function App() {
   return (
     <div>
-      <h1>Projeto Voluntários para Hospital</h1>
+      <Home />
     </div>
   )
 }
