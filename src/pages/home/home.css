@@ -9,3 +9,20 @@ main {
 }
 
 
+.section1 {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-voluntarios {
+    width: 70%;
+}
+
+.section2 {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-home {
+    width: 70%;
+}

@@ -9,12 +9,13 @@ const Home = () => (
             <Header />
         </header>
         <main className="home-content">
-            <h1>isso é um teste da pagina home</h1>
             <section className='section1'>
-
+                <img src="banner1.png" alt="imagem-da-home" className='banner-home' />
             </section>
-            <section className='section2'>
 
+            <section className='section2'>
+                <img src="imgVoluntarios.png"
+                    alt="imagem-banner-voluntarios" className='banner-voluntarios' />
             </section>
         </main >
         <footer>

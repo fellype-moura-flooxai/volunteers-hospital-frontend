@@ -1,12 +1,12 @@
 .footer {
     width: 100%;
-    background: linear-gradient(#010161f3, #0b3975);
+    background: linear-gradient(#002352, #0b3975);
     color: white;
     text-align: center;
     height: 31.25rem;
     display: flex;
-    /* flex-wrap: wrap; */
-    justify-content: space-around;
+    justify-content: space-evenly;
+
 }
 
 .footer * {
@@ -15,12 +15,10 @@
 }
 
 .logo-endereco {
-    border: solid;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-evenly;
-
 }
 
 .logo-img-footer{
@@ -29,23 +27,25 @@ justify-content: space-evenly;
 }
 
 .endereço * {
-    /* border: solid;
-    border-color: brown; */
     font-size: 17px;
     text-align: left;
 }
 
-.institucional {
-    border: solid;
-    border-color: black;
+.Voluntariado {
+    width: 400px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-.paciente {
-    border: solid;
-    border-color: chartreuse;
+.Voluntariado * {
+    font-size: 1.375rem;
 }
 
-.junte_se {
-    border: solid;
-    border-color: blueviolet;
+.btnSaibaMais{
+    color: #002352;
+    width: 50%;
+    height: 10%;
 }
