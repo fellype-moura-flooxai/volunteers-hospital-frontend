@@ -4,9 +4,7 @@
     min-height: 100vh;
 }
 
-main {
-    flex: 1;
-}
+
 
 
 .section1 {
@@ -24,5 +22,26 @@ main {
 }
 
 .banner-home {
-    width: 70%;
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .home-content {
+        margin-top: 12vh;
+    }
+
+    .banner-voluntarios {
+        width: 100%;
+    }
+
+    .banner-home {
+        width: 100%;
+    }
+
+    .container {
+        height: 100%;
+        
+    }
+
+    
 }
