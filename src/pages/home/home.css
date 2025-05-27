@@ -19,13 +19,12 @@
 }
 
 .banner-home {
-    width: 100%;
+    width:70%;
 }
 
 @media screen and (max-width: 1024px) {
-    .perfil-content {
+    .home-content {
         margin-top: 12vh;
-        height: 500px;
     }
 
     .container {
@@ -33,5 +32,12 @@
         
     }
 
+    .banner-voluntarios {
+    width: 100%;
+}
+
+.banner-home {
+    width: 100%;
+}
     
 }
