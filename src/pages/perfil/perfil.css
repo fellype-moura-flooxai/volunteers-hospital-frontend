@@ -3,13 +3,13 @@
 }
 
 .perfil-content {
-        margin-top: 16vh;
-        height: 500px;
+       height: 500px;
     }
 
 @media screen and (max-width: 1024px) {
    .perfil-content {
-     height: 400px;
+    margin-top: 12vh;
+     height: 500px;
     }
 
     .container {

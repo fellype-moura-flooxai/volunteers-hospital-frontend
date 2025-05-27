@@ -1,0 +1,25 @@
+.cadastro-content {
+       margin-top: 12vh;
+       height: 500px;
+    }
+    
+    .container {
+        height: 100%;
+        
+    }
+
+
+@media screen and (max-width: 1024px) {
+   .cadastro-content {
+       margin-top: 12vh;
+       height: 500px;
+    }
+    
+    .container {
+        height: 100%;
+        
+    }
+
+
+
+}

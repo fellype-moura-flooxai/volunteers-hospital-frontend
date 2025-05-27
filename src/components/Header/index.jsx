@@ -27,7 +27,7 @@ const Header = () => {
                             </ul>
                         </li>
                         <li><a href="/">Projeto mãos que Ajudam</a></li>
-                        <li><a href="/">Quem somos nós</a></li>
+                        <li><a href="/perfil">vagas voluntaria</a></li>
                         <li><a href="/login">Login</a></li>
                         <li><a href="/cadastro">Cadastro</a></li>
                     </ul>
@@ -48,7 +48,7 @@ const Header = () => {
                             </ul>
                         </li>
                         <li><a href="/">Projeto mãos que Ajudam</a></li>
-                        <li><a href="/">Quem somos nós</a></li>
+                        <li><a href="/perfil">vagas voluntaria</a></li>
                         <li><a href="/login">Login</a></li>
                         <li><a href="/cadastro">Cadastro</a></li>
                     </ul>
