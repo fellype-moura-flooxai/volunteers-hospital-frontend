@@ -15,7 +15,7 @@ const Header = () => {
             </div>
 
             <div className='header'>
-                <img src="logo.png" alt="logo do hospital" className='logo-img-header' />
+                <a href="/" className='logoheader'><img src="logo.png" alt="logo do hospital" className='logo-img-header' /></a>
 
                 <nav className='nav-menu-desktop'>
                     <ul className='menu-list'>
@@ -28,7 +28,7 @@ const Header = () => {
                         </li>
                         <li><a href="/">Projeto mãos que Ajudam</a></li>
                         <li><a href="/">Quem somos nós</a></li>
-                        <li><a href="/">Login</a></li>
+                        <li><a href="/login">Login</a></li>
                         <li><a href="/">Cadastro</a></li>
                     </ul>
                 </nav>
@@ -49,7 +49,7 @@ const Header = () => {
                         </li>
                         <li><a href="/">Projeto mãos que Ajudam</a></li>
                         <li><a href="/">Quem somos nós</a></li>
-                        <li><a href="/">Login</a></li>
+                        <li><a href="/login">Login</a></li>
                         <li><a href="/">Cadastro</a></li>
                     </ul>
 

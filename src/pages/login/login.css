@@ -1,0 +1,46 @@
+.login-container {
+  max-width: 100%;
+  margin: 4rem auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.input-group {
+  margin-bottom: 1.2rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.btn-login {
+  border-radius: 100px;
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #22aee6;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.mensagem {
+  margin-top: 1rem;
+  color: green;
+}
+
+@media screen and (max-width: 1024px) {
+  .login-container {
+    margin-top: 30%;
+  }
+
+  .container {
+    height: 100%;
+
+  }
+
+
+}
