@@ -29,7 +29,7 @@ const Header = () => {
                         <li><a href="/">Projeto mãos que Ajudam</a></li>
                         <li><a href="/">Quem somos nós</a></li>
                         <li><a href="/login">Login</a></li>
-                        <li><a href="/">Cadastro</a></li>
+                        <li><a href="/cadastro">Cadastro</a></li>
                     </ul>
                 </nav>
 
@@ -50,7 +50,7 @@ const Header = () => {
                         <li><a href="/">Projeto mãos que Ajudam</a></li>
                         <li><a href="/">Quem somos nós</a></li>
                         <li><a href="/login">Login</a></li>
-                        <li><a href="/">Cadastro</a></li>
+                        <li><a href="/cadastro">Cadastro</a></li>
                     </ul>
 
             </div>

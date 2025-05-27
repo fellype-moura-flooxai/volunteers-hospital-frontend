@@ -22,8 +22,8 @@
 }
 
 .logo-img-footer {
-    border: solid;
     width: 60%;
+    margin-right: 25%;
 }
 
 .endereco {
@@ -32,21 +32,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid;
-    color: turquoise;
+    margin-top: 5%;
 }
 
 .endereco-text {
     margin-top: 10%;
-    border: solid;
-    color: tomato;
     width: 60%;
     height: 100%;
     font-size: 110%;
     display: column;
-
     text-align: left;
-
+    color: white;
 }
 
 
@@ -69,6 +65,14 @@
 .footer-mobile {
     display: none;
 }
+
+.copyright {
+        color: white;
+        background: #0b3975;
+        font-size: 12px;
+        text-align: center;
+        height: 30px;
+    }
 
 @media screen and (max-width: 1024px) {
 

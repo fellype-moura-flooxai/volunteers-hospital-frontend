@@ -1,0 +1,22 @@
+.container {
+    height: 100%;
+}
+
+.perfil-content {
+        margin-top: 12vh;
+        height: 500px;
+    }
+
+@media screen and (max-width: 1024px) {
+   .perfil-content {
+     height: 400px;
+    }
+
+    .container {
+        height: 100%;
+        
+    }
+
+
+
+}
