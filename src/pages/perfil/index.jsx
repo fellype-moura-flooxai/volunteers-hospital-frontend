@@ -9,7 +9,7 @@ const PerfilVoluntario = () => {
   const [vagas, setVagas] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/vagas')
+    fetch('https://volunteers-hospital-backend.onrender.com/vagas')
       .then(response => response.json())
       .then(data => setVagas(data))
       .catch(error => console.error('Erro ao buscar vagas:', error));

@@ -15,7 +15,7 @@ export default function CadastroVoluntario() {
         e.preventDefault();
 
         try {
-            const resposta = await fetch('http://localhost:3000/cadastro', {
+            const resposta = await fetch('https://volunteers-hospital-backend.onrender.com/cadastro', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ nome, email, senha })
