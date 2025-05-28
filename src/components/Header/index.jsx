@@ -44,7 +44,7 @@ const Header = () => {
                         <li className='dropdown'>
                             <a href="/">Consultas e exames</a>
                             <ul className='dropdown-menu'>
-                                <li><a href="/">teste</a></li>
+                                <li><a href="/vagas">teste</a></li>
                                 <li><a href="/">teste</a></li>
                             </ul>
                         </li>
@@ -73,7 +73,7 @@ const Header = () => {
                     <li className='dropdown'>
                         <a href="/">Consultas e exames</a>
                         <ul className='dropdown-menu'>
-                            <li><a href="/">teste</a></li>
+                            <li><a href="/vagas">teste</a></li>
                             <li><a href="/">teste</a></li>
                         </ul>
                     </li>
