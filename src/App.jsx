@@ -4,6 +4,7 @@ import Login from './pages/login/index'
 import PainelAdmin from './pages/admin'
 import PerfilVoluntario from './pages/perfil'
 import CadastroVoluntario from './pages/cadastro';
+import Vagas from './pages/vagas/index'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/admin/painel" element={<PainelAdmin />} />
         <Route path="/perfil" element={<PerfilVoluntario />} />
         <Route path="/cadastro" element={<CadastroVoluntario />} />
+        <Route path="/vagas" element={<Vagas />} />
       </Routes>
     </Router>
   )

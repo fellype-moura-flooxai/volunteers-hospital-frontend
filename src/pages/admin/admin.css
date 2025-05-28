@@ -1,0 +1,22 @@
+.container {
+    height: 100%;
+}
+
+.admin-content {
+    height: 500px;
+}
+
+@media screen and (max-width: 1024px) {
+    .admin-content {
+        margin-top: 12vh;
+        height: 500px;
+    }
+
+    .container {
+        height: 100%;
+
+    }
+
+
+
+}

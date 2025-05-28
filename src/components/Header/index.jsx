@@ -1,8 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Header.css'
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-    const [menuAberto, setMenuAberto] = useState(false);
+    const [menuAberto, setMenuAberto] = useState(false)
+
+    const [logado, setLogado] = useState(false)
+    const [nomeUsuario, setNomeUsuario] = useState('')
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        const token = localStorage.getItem('token')
+        const nome = localStorage.getItem('nome');
+
+        if (token) {
+            setLogado(true)
+            setNomeUsuario(nome || 'Usuário')
+        }
+    }, []);
+
+    const handleLogout = () => {
+        localStorage.clear() // limpa todos os dados
+        setLogado(false)
+        setNomeUsuario('')
+        navigate('/login')
+    }
 
     return (
         <>
@@ -15,7 +37,7 @@ const Header = () => {
             </div>
 
             <div className='header'>
-                <a href="/" className='logoheader'><img src="logo.png" alt="logo do hospital" className='logo-img-header' /></a>
+                <a href="/" className='logoheader'><img src="/logo.png" alt="logo do hospital" className='logo-img-header' /></a>
 
                 <nav className='nav-menu-desktop'>
                     <ul className='menu-list'>
@@ -28,30 +50,46 @@ const Header = () => {
                         </li>
                         <li><a href="/">Projeto mãos que Ajudam</a></li>
                         <li><a href="/perfil">vagas voluntaria</a></li>
-                        <li><a href="/login">Login</a></li>
-                        <li><a href="/cadastro">Cadastro</a></li>
+
+                        {!logado && <li><a href="/login">Login</a></li>}
+                        {!logado && <li><a href="/cadastro">Cadastro</a></li>}
+
+                        {logado && (
+                            <>
+                                <li><span className="bem-vindo">Olá, {nomeUsuario}!</span></li>
+                                <li><button onClick={handleLogout} className="btn-logout">Sair</button></li>
+                            </>
+                        )}
                     </ul>
                 </nav>
 
                 <div className="menu-toggle" onClick={() => setMenuAberto(!menuAberto)}>
-                    {menuAberto ? '✖' : '☰'} 
+                    {menuAberto ? '✖' : '☰'}
                 </div>
-                </div>
+            </div>
 
-                <div className={`side-menu ${menuAberto ? 'aberto' : ''}`}>
-                    <ul className='menu-list'>
-                        <li className='dropdown'>
-                            <a href="/">Consultas e exames</a>
-                            <ul className='dropdown-menu'>
-                                <li><a href="/">teste</a></li>
-                                <li><a href="/">teste</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="/">Projeto mãos que Ajudam</a></li>
-                        <li><a href="/perfil">vagas voluntaria</a></li>
-                        <li><a href="/login">Login</a></li>
-                        <li><a href="/cadastro">Cadastro</a></li>
-                    </ul>
+            <div className={`side-menu ${menuAberto ? 'aberto' : ''}`}>
+                <ul className='menu-list'>
+                    <li className='dropdown'>
+                        <a href="/">Consultas e exames</a>
+                        <ul className='dropdown-menu'>
+                            <li><a href="/">teste</a></li>
+                            <li><a href="/">teste</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/">Projeto mãos que Ajudam</a></li>
+                    <li><a href="/perfil">vagas voluntaria</a></li>
+
+                    {!logado && <li><a href="/login">Login</a></li>}
+                    {!logado && <li><a href="/cadastro">Cadastro</a></li>}
+
+                    {logado && (
+                        <>
+                            <li><span className="bem-vindo">Olá, {nomeUsuario}!</span></li>
+                            <li><button onClick={handleLogout} className="btn-logout">Sair</button></li>
+                        </>
+                    )}
+                </ul>
 
             </div>
         </>

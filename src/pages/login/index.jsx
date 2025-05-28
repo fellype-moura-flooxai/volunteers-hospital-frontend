@@ -1,14 +1,30 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './login.css';
 import Header from '../../components/Header/index'
 import Footer from '../../components/Footer/index'
+
+
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [mensagem, setMensagem] = useState('');
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    const tipo = localStorage.getItem('tipo_usuario');
+
+    if (token && tipo) {
+      // Já está logado, redireciona
+      if (tipo === 'admin') {
+        navigate('/admin/painel');
+      } else {
+        navigate('/perfil');
+      }
+    }
+  }, []);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -20,23 +36,28 @@ export default function Login() {
         body: JSON.stringify({ email, senha })
       });
 
-      const dados = await resposta.json();
+      const dados = await resposta.json()
 
       if (resposta.ok) {
-        setMensagem(`Bem-vindo, ${dados.usuario.nome}`);
+
+        // Salva o token e informações no localStorage
+        localStorage.setItem('token', dados.token)
+        localStorage.setItem('usuarioId', dados.usuario.id) // ainda pode ser útil
+        localStorage.setItem('tipo_usuario', dados.tipo_usuario)
+        localStorage.setItem('nome', dados.usuario.nome)
 
         // Redirecionamento com base no tipo de usuário
         if (dados.tipo_usuario === 'admin') {
           navigate('/admin/painel');
         } else {
-          navigate('/perfil');
+          navigate('/perfil')
         }
 
       } else {
-        setMensagem(dados.mensagem || 'Erro ao fazer login.');
+        setMensagem(dados.mensagem || 'Erro ao fazer login.')
       }
     } catch (erro) {
-      setMensagem('Erro ao conectar com o servidor.');
+      setMensagem('Erro ao conectar com o servidor.')
       console.error(erro);
     }
   };

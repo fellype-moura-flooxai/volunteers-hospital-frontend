@@ -13,7 +13,7 @@ const Footer = () => (
     <>
         <footer className='footer-desktop'>
             <section className='endereco'>
-                <img src="logo.png" alt="logo do hospital" className='logo-img-footer' />
+                <img src="/logo.png" alt="logo do hospital" className='logo-img-footer' />
                 <div className='endereco-text'>
                     <address>
                         Rua Doutor sla oq tanto faz, 123<br />
@@ -50,7 +50,7 @@ const Footer = () => (
             </section>
 
             <div className='contact-mobile'>
-                <img src="logo.png" alt="logo-mobile" className='logo-mobile' />
+                <img src="/logo.png" alt="logo-mobile" className='logo-mobile' />
                 <div className='divcentral'>
                 </div>
                 <FontAwesomeIcon icon={faPhoneAlt} /><a href="tel: 123456789" className='sla'><p>(13) 123456789</p></a>
