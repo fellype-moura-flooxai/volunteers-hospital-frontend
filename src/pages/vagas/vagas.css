@@ -1,8 +1,8 @@
 .vagas-content {
-    padding: 20px;
     max-width: 800px;
     margin: 0 auto;
-    height: 500px;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 
 .lista-vagas {
@@ -16,6 +16,7 @@
     padding: 15px;
     margin-bottom: 15px;
     background-color: #f9f9f9;
+
 }
 
 .vaga-card h3 {
@@ -36,26 +37,34 @@
     background-color: #062852;
 }
 
+.vagas-content p {
+    text-align: center;
+    margin-top: 16px;
+    font-weight: 500;
+    color: green;
+}
+
+
 .erro {
     color: red;
     font-weight: bold;
 }
 
 .mensagem-vaga {
-  margin-top: 8px;
-  color: #007bff;
-  font-size: 0.9rem;
+    margin-top: 8px;
+    color: #007bff;
+    font-size: 0.9rem;
 }
 
 @media screen and (max-width: 1024px) {
-   .vagas-content {
-       margin-top: 12vh;
-       height: 500px;
+    .vagas-content {
+        margin-top: 20vh;
+
     }
-    
+
     .container {
         height: 100%;
-        
+
     }
 
 

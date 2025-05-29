@@ -67,7 +67,8 @@ export default function Vagas() {
                 <Header />
             </header>
             <main className="vagas-content">
-                <h2>Vagas Disponíveis</h2>
+                <h2>Vagas disponíveis para voluntários.</h2>
+                <br />
                 {erro && <p className="erro">{erro}</p>}
 
                 {vagas.length === 0 ? (

@@ -7,20 +7,34 @@ const Header = () => {
 
     const [logado, setLogado] = useState(false)
     const [nomeUsuario, setNomeUsuario] = useState('')
+    const [tipoUsuario, setTipoUsuario] = useState('')
     const navigate = useNavigate()
 
     useEffect(() => {
-        const token = localStorage.getItem('token')
-        const nome = localStorage.getItem('nome');
+        const atualizarDados = () => {
+            const token = localStorage.getItem('token')
+            const nome = localStorage.getItem('nome')
+            const tipo = (localStorage.getItem('tipo_usuario') || '').trim()
 
-        if (token) {
-            setLogado(true)
-            setNomeUsuario(nome || 'Usuário')
+            if (token) {
+                setLogado(true)
+                setNomeUsuario(nome || 'Usuário')
+                setTipoUsuario(tipo)
+            } else {
+                setLogado(false)
+                setNomeUsuario('')
+                setTipoUsuario('')
+            }
         }
-    }, []);
+
+        atualizarDados()
+        window.addEventListener('storage', atualizarDados)
+
+        return () => window.removeEventListener('storage', atualizarDados)
+    }, [])
 
     const handleLogout = () => {
-        localStorage.clear() // limpa todos os dados
+        localStorage.clear()
         setLogado(false)
         setNomeUsuario('')
         navigate('/login')
@@ -44,12 +58,19 @@ const Header = () => {
                         <li className='dropdown'>
                             <a href="/">Consultas e exames</a>
                             <ul className='dropdown-menu'>
-                                <li><a href="/vagas">teste</a></li>
+                                <li><a href="/">teste</a></li>
                                 <li><a href="/">teste</a></li>
                             </ul>
                         </li>
-                        <li><a href="/">Projeto mãos que Ajudam</a></li>
-                        <li><a href="/perfil">vagas voluntaria</a></li>
+                        <li><a href="/vagas"> Vagas - projeto mãos que Ajudam </a></li>
+
+                        {logado && tipoUsuario === 'admin' && (
+                            <li><a href="/admin/painel">Painel do Admin</a></li>
+                        )}
+
+                        {logado && tipoUsuario === 'voluntario' && (
+                            <li><a href="/perfil">Área do Voluntário</a></li>
+                        )}
 
                         {!logado && <li><a href="/login">Login</a></li>}
                         {!logado && <li><a href="/cadastro">Cadastro</a></li>}
@@ -77,9 +98,14 @@ const Header = () => {
                             <li><a href="/">teste</a></li>
                         </ul>
                     </li>
-                    <li><a href="/">Projeto mãos que Ajudam</a></li>
-                    <li><a href="/perfil">vagas voluntaria</a></li>
+                    <li><a href="/vagas">Projeto mãos que Ajudam</a></li>
+                    {logado && tipoUsuario === 'admin' && (
+                        <li><a href="/admin/painel">Painel do Admin</a></li>
+                    )}
 
+                    {logado && tipoUsuario === 'voluntario' && (
+                        <li><a href="/perfil">Área do Voluntário</a></li>
+                    )}
                     {!logado && <li><a href="/login">Login</a></li>}
                     {!logado && <li><a href="/cadastro">Cadastro</a></li>}
 

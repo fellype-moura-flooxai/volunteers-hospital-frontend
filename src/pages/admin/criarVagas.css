@@ -1,0 +1,83 @@
+.admin-vagas-content {
+    margin-left: 35%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    padding: 40px;
+    max-width: 100%;
+    width: 30%;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: solid;
+}
+
+.admin-vagas-content h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 30px;
+}
+
+.form-vaga {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-vaga label {
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-vaga input,
+.form-vaga textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.form-vaga button {
+    background-color: #003366;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-vaga button:hover {
+    background-color: #005099;
+}
+
+.mensagem-vaga {
+    text-align: center;
+    color: green;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+    .admin-vagas-content {
+        margin-left: 26%;
+        margin-top: 21vh;
+        margin-bottom: 10vh;
+        padding: 40px;
+        max-width: 100%;
+        width: 50%;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border: solid;
+    }
+
+    @media screen and (max-width: 650px) {
+        .admin-vagas-content {
+            margin-left: 16%;
+            width: 70%;
+        }
+    }
+
+}

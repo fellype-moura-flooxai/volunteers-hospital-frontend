@@ -6,6 +6,23 @@
     height: 500px;
 }
 
+.btn-admin-criar {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-admin-criar:hover {
+    background-color: #0056b3;
+}
+
 @media screen and (max-width: 1024px) {
     .admin-content {
         margin-top: 12vh;

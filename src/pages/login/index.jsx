@@ -46,6 +46,8 @@ export default function Login() {
         localStorage.setItem('tipo_usuario', dados.tipo_usuario)
         localStorage.setItem('nome', dados.usuario.nome)
 
+        window.dispatchEvent(new Event('storage'));
+
         // Redirecionamento com base no tipo de usuário
         if (dados.tipo_usuario === 'admin') {
           navigate('/admin/painel');

@@ -48,6 +48,8 @@
     gap: 1rem;
     list-style: none;
     position: relative;
+    font-weight: bold;
+    align-items: center;
 }
 
 .menu-list li {
@@ -99,6 +101,28 @@
     cursor: pointer;
     color: white;
 }
+
+.bem-vindo {
+    color: rgb(95, 219, 241);
+}
+
+.btn-logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 20px;
+    border-style: none;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: #01d6d6;
+    color: rgb(255, 255, 255);
+}
+
+.btn-logout:hover {
+    background-color: #0bffff;
+}
+
 
 @media screen and (max-width: 1024px) {
     .top-bar-list {
@@ -160,12 +184,12 @@
         .header {
             position: fixed;
             width: 100%;
-            
+
         }
 
         .logoheader {
-        height: 70%;
-    }
+            height: 70%;
+        }
 
         .nav-menu-desktop {
             display: none;
