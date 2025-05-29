@@ -17,6 +17,30 @@ const PerfilVoluntario = () => {
       .catch(error => console.error('Erro ao buscar candidaturas:', error))
   }, [])
 
+  const handleCancelar = async (candidaturaId) => {
+    const confirmar = window.confirm('Tem certeza que deseja cancelar esta candidatura?')
+    if (!confirmar) return
+
+    try {
+      const resposta = await fetch(`https://volunteers-hospital-backend.onrender.com/candidaturas/${candidaturaId}`, {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ usuario_id: usuarioId })
+      })
+
+      const dados = await resposta.json()
+
+      if (!resposta.ok) {
+        return alert(dados.erro || 'Erro ao cancelar a candidatura.')
+      }
+
+      alert(dados.mensagem || 'Candidatura cancelada com sucesso!')
+      setCandidaturas(candidaturas.filter(item => item.candidatura_id !== candidaturaId))
+    } catch (erro) {
+      alert('Erro inesperado ao cancelar.')
+    }
+  }
+
   return (
     <div className='container'>
       <header>
@@ -36,6 +60,12 @@ const PerfilVoluntario = () => {
                 <h3>{item.titulo}</h3>
                 <p><strong>Status:</strong> {item.status}</p>
                 <p><strong>Data:</strong> {new Date(item.data).toLocaleDateString()}</p>
+                <button
+                  className="btn-cancelar"
+                  onClick={() => handleCancelar(item.candidatura_id)}
+                >
+                  Cancelar Candidatura
+                </button>
               </li>
             ))}
           </ul>
