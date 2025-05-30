@@ -18,6 +18,9 @@ const PainelAdmin = () => {
         <Link to="/admin/vagas">
           <button className="btn-admin-criar">Criar Nova Vaga</button>
         </Link>
+        <Link to="/admin/gerenciar-vagas">
+          <button className="btn-admin-criar">gerenciar vagas</button>
+        </Link>
       </main>
       <footer>
         <Footer />

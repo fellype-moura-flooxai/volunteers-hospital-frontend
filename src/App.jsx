@@ -5,7 +5,8 @@ import PainelAdmin from './pages/admin'
 import PerfilVoluntario from './pages/perfil'
 import CadastroVoluntario from './pages/cadastro';
 import Vagas from './pages/vagas/index'
-import VagasAdmin from './pages/admin/CriarVaga'
+import VagasAdmin from './pages/admin/criar-vaga/index'
+import GerenciarVagas from './pages/admin/gerenciar-vagas/index'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/cadastro" element={<CadastroVoluntario />} />
         <Route path="/vagas" element={<Vagas />} />
         <Route path="/admin/vagas" element={<VagasAdmin />} />
+        <Route path="/admin/gerenciar-vagas" element={<GerenciarVagas />} />
       </Routes>
     </Router>
   )

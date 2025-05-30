@@ -1,9 +1,9 @@
 // src/pages/admin/VagasAdmin.jsx
 import React, { useState } from 'react'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
+import Header from '../../../components/Header'
+import Footer from '../../../components/Footer'
 import './criarVagas.css'
-import useAuthRedirect from '../../hooks/useAuthRedirect'
+import useAuthRedirect from '../../../hooks/useAuthRedirect'
 
 export default function VagasAdmin() {
     useAuthRedirect('admin') //  Redireciona se não for admin
