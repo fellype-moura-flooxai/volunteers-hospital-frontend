@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react'
 import Header from '../../../components/Header/index'
 import Footer from '../../../components/Footer/index'
 import useAuthRedirect from '../../../hooks/useAuthRedirect'
+import { useNavigate } from 'react-router-dom'
 import './gerenciarVagas.css'
 
 export default function GerenciarVagas() {
     useAuthRedirect('admin');
     const [vagas, setVagas] = useState([])
     const [mensagem, setMensagem] = useState('')
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch(`https://volunteers-hospital-backend.onrender.com/vagas`)
@@ -57,7 +59,7 @@ export default function GerenciarVagas() {
                                 <p><strong>Data:</strong> {new Date(vaga.data).toLocaleDateString()}</p>
                                 <p>{vaga.descricao}</p>
                                 <div className="botoes-admin">
-                                    <button>Editar</button>
+                                    <button onClick={() => navigate(`/admin/editar-vaga/${vaga.id}`)}>Editar</button>
                                     <button onClick={() => excluirVaga(vaga.id)}>Excluir</button>
                                 </div>
                             </li>

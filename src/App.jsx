@@ -7,6 +7,7 @@ import CadastroVoluntario from './pages/cadastro';
 import Vagas from './pages/vagas/index'
 import VagasAdmin from './pages/admin/criar-vaga/index'
 import GerenciarVagas from './pages/admin/gerenciar-vagas/index'
+import EditarVaga from './pages/admin/gerenciar-vagas/EditarVaga'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/vagas" element={<Vagas />} />
         <Route path="/admin/vagas" element={<VagasAdmin />} />
         <Route path="/admin/gerenciar-vagas" element={<GerenciarVagas />} />
+        <Route path="/admin/editar-vaga/:id" element={<EditarVaga />} />
       </Routes>
     </Router>
   )

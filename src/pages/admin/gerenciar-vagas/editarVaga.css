@@ -1,0 +1,63 @@
+.editar-vaga-content {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f4f8fc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.editar-vaga-content h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #0b3975;
+}
+
+.form-vaga label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-vaga input[type="text"],
+.form-vaga input[type="date"],
+.form-vaga textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.form-vaga textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.form-vaga button {
+    display: block;
+    width: 100%;
+    background-color: #0b3975;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.form-vaga button:hover {
+    background-color: #062c5c;
+}
+
+.mensagem-vaga {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #0b3975;
+}
