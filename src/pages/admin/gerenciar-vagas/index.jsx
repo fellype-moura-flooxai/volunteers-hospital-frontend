@@ -61,6 +61,7 @@ export default function GerenciarVagas() {
                                 <div className="botoes-admin">
                                     <button onClick={() => navigate(`/admin/editar-vaga/${vaga.id}`)}>Editar</button>
                                     <button onClick={() => excluirVaga(vaga.id)}>Excluir</button>
+                                    <button onClick={() => navigate(`/admin/vaga/${vaga.id}/candidaturas`)}>Ver Candidaturas</button>
                                 </div>
                             </li>
                         ))}
