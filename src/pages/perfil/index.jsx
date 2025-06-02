@@ -58,7 +58,7 @@ const PerfilVoluntario = () => {
             {candidaturas.map((item) => (
               <li key={item.candidatura_id} className="vaga-card">
                 <h3>{item.titulo}</h3>
-                <p><strong>Status:</strong> {item.status}</p>
+                <p><strong>Status:</strong> <span className={`status ${item.status}`}>{item.status}</span></p>
                 <p><strong>Data:</strong> {new Date(item.data).toLocaleDateString()}</p>
                 <button
                   className="btn-cancelar"

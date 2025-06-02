@@ -57,7 +57,7 @@ export default function CandidaturasVaga() {
                             <li key={c.id}>
                                 <p><strong>Nome:</strong> {c.nome}</p>
                                 <p><strong>Email:</strong> {c.email}</p>
-                                <p><strong>Status:</strong> {c.status}</p>
+                                <p><strong>Status:</strong> <span className={`status ${c.status}`}>{c.status}</span></p>
                                 <p><strong>Data:</strong> {new Date(c.data_candidatura).toLocaleDateString()}</p>
                                 <div className="botoes-admin">
                                     <button onClick={() => atualizarStatus(c.candidatura_id, 'aceita')}>Aceitar</button>
