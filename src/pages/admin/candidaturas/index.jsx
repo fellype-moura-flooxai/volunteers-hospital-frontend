@@ -60,8 +60,8 @@ export default function CandidaturasVaga() {
                                 <p><strong>Status:</strong> {c.status}</p>
                                 <p><strong>Data:</strong> {new Date(c.data_candidatura).toLocaleDateString()}</p>
                                 <div className="botoes-admin">
-                                    <button onClick={() => atualizarStatus(c.id, 'aceita')}>Aceitar</button>
-                                    <button onClick={() => atualizarStatus(c.id, 'rejeitada')}>Rejeitar</button>
+                                    <button onClick={() => atualizarStatus(c.candidatura_id, 'aceita')}>Aceitar</button>
+                                    <button onClick={() => atualizarStatus(c.candidatura_id, 'rejeitada')}>Rejeitar</button>
                                 </div>
                             </li>
                         ))}
