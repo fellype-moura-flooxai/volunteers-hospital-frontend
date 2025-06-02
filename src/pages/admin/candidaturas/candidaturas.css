@@ -1,0 +1,19 @@
+.candidaturas-vaga-content {
+    padding: 2rem;
+}
+
+.lista-candidaturas {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-candidaturas li {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.botoes-admin button {
+    margin-right: 0.5rem;
+}
