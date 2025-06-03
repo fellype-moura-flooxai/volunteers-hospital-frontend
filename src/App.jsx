@@ -9,6 +9,7 @@ import VagasAdmin from './pages/admin/criar-vaga/index'
 import GerenciarVagas from './pages/admin/gerenciar-vagas/index'
 import EditarVaga from './pages/admin/gerenciar-vagas/EditarVaga'
 import Candidaturas from './pages/admin/candidaturas/index'
+import Ranking from './pages/ranking/index'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/admin/gerenciar-vagas" element={<GerenciarVagas />} />
         <Route path="/admin/editar-vaga/:id" element={<EditarVaga />} />
         <Route path="/admin/vaga/:id/candidaturas" element={<Candidaturas />} />
+        <Route path="/ranking" element={<Ranking />} />
       </Routes>
     </Router>
   )

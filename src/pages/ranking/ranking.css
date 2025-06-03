@@ -1,0 +1,48 @@
+.ranking-content {
+    padding: 2rem;
+    text-align: center;
+    min-height: 30vh;
+}
+
+.ranking-lista {
+    list-style: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.ranking-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+}
+
+.posicao {
+    width: 50px;
+    text-align: left;
+}
+
+.nome {
+    flex: 1;
+    text-align: left;
+}
+
+.pontos {
+    width: 100px;
+    text-align: right;
+}
+
+@media screen and (max-width: 1024px) {
+    .ranking-content {
+        margin-top: 12vh;
+    }
+
+    .container {
+        height: 100%;
+
+    }
+
+}
+
