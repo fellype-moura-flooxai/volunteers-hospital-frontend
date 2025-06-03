@@ -48,6 +48,7 @@ export default function GerenciarVagas() {
             <Header />
             <main className="gerenciar-vagas-content">
                 <h2>Gerenciar Vagas</h2>
+                <br />
                 {mensagem && <p className="mensagem">{mensagem}</p>}
                 {vagas.length === 0 ? (
                     <p>Nenhuma vaga cadastrada.</p>

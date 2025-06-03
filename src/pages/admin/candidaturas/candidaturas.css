@@ -1,54 +1,97 @@
 .candidaturas-vaga-content {
-    padding: 2rem;
+  padding: 2rem;
+  text-align: center;
+  min-height: 40vh;
 }
 
 .lista-candidaturas {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
 .lista-candidaturas li {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+  text-align: left;
+}
+
+.lista-candidaturas li:hover {
+  transform: scale(1.01);
+}
+
+.botoes-admin {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .botoes-admin button {
-    margin-right: 0.5rem;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.botoes-admin button:hover {
+  background-color: #0056b3;
 }
 
 .status {
-    font-size: 0.85rem;
-    padding: 2px 6px;
-    border-radius: 4px;
-    text-transform: capitalize;
-    display: inline-block;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  display: inline-block;
+  font-weight: bold;
 }
 
 .status.pendente {
-    background-color: #ffe58a;
-    color: #664d03;
+  background-color: #fff3cd;
+  color: #856404;
 }
 
 .status.aceita {
-    background-color: #d4edda;
-    color: #155724;
+  background-color: #d4edda;
+  color: #155724;
 }
 
 .status.rejeitada {
-    background-color: #f8d7da;
-    color: #721c24;
+  background-color: #f8d7da;
+  color: #721c24;
 }
 
 @media screen and (max-width: 1024px) {
-    .candidaturas-vaga-content {
-        margin-top: 12vh;
-        height: 500px;
-    }
+  .candidaturas-vaga-content {
+    margin-top: 12vh;
+    padding: 2rem 1rem;
+  }
+}
 
-    .container {
-        height: 100%;
+@media screen and (max-width: 650px) {
+  .candidaturas-vaga-content {
+    padding: 1.5rem 0.5rem;
+  }
 
-    }
+  .botoes-admin {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .botoes-admin button {
+    width: 100%;
+    max-width: 300px;
+  }
 }

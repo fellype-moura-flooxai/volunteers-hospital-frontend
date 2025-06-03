@@ -31,6 +31,7 @@ export default function Ranking() {
             </header>
             <main className="ranking-content">
                 <h1>Ranking dos Voluntários</h1>
+                <br />
                 {mensagem && <p className="mensagem">{mensagem}</p>}
                 {ranking.length === 0 ? (
                     <p>Nenhum voluntário pontuado ainda.</p>

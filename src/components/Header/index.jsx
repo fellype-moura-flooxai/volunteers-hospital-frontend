@@ -58,11 +58,11 @@ const Header = () => {
                         <li className='dropdown'>
                             <a href="/">Consultas e exames</a>
                             <ul className='dropdown-menu'>
-                                <li><a href="/">teste</a></li>
-                                <li><a href="/">teste</a></li>
+                                <li><a href="/">Consultas (em breve)</a></li>
+                                <li><a href="/">Exames (em breve)</a></li>
                             </ul>
                         </li>
-                        <li><a href="/vagas"> Vagas - projeto mãos que Ajudam </a></li>
+                        <li><a href="/vagas">Vagas Projeto mãos que Ajudam</a></li>
 
                         {logado && tipoUsuario === 'admin' && (
                             <li><a href="/admin/painel">Painel do Admin</a></li>
@@ -70,6 +70,10 @@ const Header = () => {
 
                         {logado && tipoUsuario === 'voluntario' && (
                             <li><a href="/perfil">Área do Voluntário</a></li>
+                        )}
+
+                        {logado && tipoUsuario === 'voluntario' && (
+                            <li><a href="/ranking">Ranking</a></li>
                         )}
 
                         {!logado && <li><a href="/login">Login</a></li>}
@@ -94,11 +98,11 @@ const Header = () => {
                     <li className='dropdown'>
                         <a href="/">Consultas e exames</a>
                         <ul className='dropdown-menu'>
-                            <li><a href="/vagas">teste</a></li>
-                            <li><a href="/">teste</a></li>
+                            <li><a href="/">Consultas (em breve)</a></li>
+                            <li><a href="/">Exames (em breve)</a></li>
                         </ul>
                     </li>
-                    <li><a href="/vagas">Projeto mãos que Ajudam</a></li>
+                    <li><a href="/vagas">Vagas Projeto mãos que Ajudam</a></li>
                     {logado && tipoUsuario === 'admin' && (
                         <li><a href="/admin/painel">Painel do Admin</a></li>
                     )}
@@ -106,6 +110,11 @@ const Header = () => {
                     {logado && tipoUsuario === 'voluntario' && (
                         <li><a href="/perfil">Área do Voluntário</a></li>
                     )}
+
+                    {logado && tipoUsuario === 'voluntario' && (
+                        <li><a href="/ranking">Ranking</a></li>
+                    )}
+
                     {!logado && <li><a href="/login">Login</a></li>}
                     {!logado && <li><a href="/cadastro">Cadastro</a></li>}
 

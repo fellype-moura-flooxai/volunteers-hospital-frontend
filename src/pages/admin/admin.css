@@ -1,12 +1,30 @@
-.container {
-    height: 100%;
-}
-
 .admin-content {
-    height: 500px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
 }
 
-.btn-admin-criar {
+.admin-content h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.admin-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.admin-content a {
+    margin: 0.5rem 0;
+}
+
+.btn-admin-criar,
+.btn-admin-gerenciar,
+.btn-admin-ranking {
     background-color: #007bff;
     color: white;
     border: none;
@@ -15,25 +33,33 @@
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
-    margin-top: 20px;
+    width: 260px;
     transition: background-color 0.3s ease;
 }
 
-.btn-admin-criar:hover {
+.btn-admin-criar:hover,
+.btn-admin-gerenciar:hover,
+.btn-admin-ranking:hover {
     background-color: #0056b3;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
+
+    .btn-admin-criar,
+    .btn-admin-gerenciar,
+    .btn-admin-ranking {
+        width: 100%;
+        max-width: 300px;
+    }
+
     .admin-content {
         margin-top: 12vh;
-        height: 500px;
+        padding: 1rem;
     }
 
-    .container {
-        height: 100%;
-
-    }
-
-
-
+    .admin-content button {
+  margin: 10px 0; 
+  width: 100%;
+  max-width: 300px;
+}
 }

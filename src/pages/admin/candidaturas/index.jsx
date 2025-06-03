@@ -10,9 +10,14 @@ export default function CandidaturasVaga() {
     const { id } = useParams()
     const [candidaturas, setCandidaturas] = useState([])
     const [mensagem, setMensagem] = useState('')
+    const [tituloVaga, setTituloVaga] = useState('')
 
     useEffect(() => {
         carregarCandidaturas()
+        fetch(`https://volunteers-hospital-backend.onrender.com/vagas/${id}`)
+            .then(res => res.json())
+            .then(data => setTituloVaga(data.titulo || ''))
+            .catch(err => console.error('Erro ao buscar vaga:', err))
     }, [id])
 
     const carregarCandidaturas = () => {
@@ -64,7 +69,8 @@ export default function CandidaturasVaga() {
         <div className="container">
             <Header />
             <main className="candidaturas-vaga-content">
-                <h2>Candidaturas para a Vaga {id}</h2>
+                <h2>Candidaturas para a vaga: {tituloVaga}</h2>
+                <br />
                 {mensagem && <p className="mensagem">{mensagem}</p>}
                 {candidaturas.length === 0 ? (
                     <p>Nenhuma candidatura encontrada.</p>
