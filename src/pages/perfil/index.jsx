@@ -41,6 +41,17 @@ const PerfilVoluntario = () => {
     }
   }
 
+  const [pontuacao, setPontuacao] = useState(0)
+
+  useEffect(() => {
+    if (!usuarioId) return
+
+    fetch(`https://volunteers-hospital-backend.onrender.com/pontuacoes/${usuarioId}`)
+      .then(res => res.json())
+      .then(data => setPontuacao(data.pontos || 0))
+      .catch(() => setPontuacao(0))
+  }, [usuarioId])
+
   return (
     <div className='container'>
       <header>
@@ -49,6 +60,7 @@ const PerfilVoluntario = () => {
       <main className='perfil-content'>
         <h1>Perfil do Voluntário</h1>
         <p>Bem-vindo! Aqui você poderá acompanhar suas vagas e pontuação.</p>
+        <p><strong>Pontuação:</strong> {pontuacao} pontos</p>
         <br />
         <h2>Minhas Candidaturas</h2>
         {candidaturas.length === 0 ? (
