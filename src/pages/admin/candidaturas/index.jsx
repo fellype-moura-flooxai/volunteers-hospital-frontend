@@ -43,6 +43,23 @@ export default function CandidaturasVaga() {
         }
     }
 
+    const concluirCandidatura = async (candidaturaId) => {
+        try {
+            const resposta = await fetch(`https://volunteers-hospital-backend.onrender.com/candidaturas/${candidaturaId}/concluir`, {
+                method: 'PUT',
+            })
+
+            const dados = await resposta.json()
+            if (!resposta.ok) throw new Error(dados.erro || 'Erro ao concluir')
+
+            setMensagem(dados.mensagem || 'Candidatura concluída com sucesso.')
+            carregarCandidaturas()
+        } catch (erro) {
+            console.error(erro)
+            setMensagem('Erro ao concluir candidatura.')
+        }
+    }
+
     return (
         <div className="container">
             <Header />
@@ -62,6 +79,10 @@ export default function CandidaturasVaga() {
                                 <div className="botoes-admin">
                                     <button onClick={() => atualizarStatus(c.candidatura_id, 'aceita')}>Aceitar</button>
                                     <button onClick={() => atualizarStatus(c.candidatura_id, 'rejeitada')}>Rejeitar</button>
+                                    {c.status === 'aceita' && (
+                                        <button onClick={() => concluirCandidatura(c.candidatura_id)}>Concluir</button>
+                                    )}
+
                                 </div>
                             </li>
                         ))}
