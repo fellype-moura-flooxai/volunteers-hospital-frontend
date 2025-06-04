@@ -43,9 +43,9 @@ const Footer = () => (
                 <div className="footer-links">
                     <h4>Links Úteis</h4>
                     <ul>
-                        <li><a href="/politica">Política de Privacidade</a></li>
-                        <li><a href="/termos">Termos de Uso</a></li>
-                        <li><a href="/contato">Contato</a></li>
+                        <li><a href="/">Política de Privacidade</a></li>
+                        <li><a href="/">Termos de Uso</a></li>
+                        <li><a href="/">Contato</a></li>
                     </ul>
                 </div>
 
