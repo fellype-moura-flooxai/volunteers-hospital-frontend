@@ -58,11 +58,12 @@ const PerfilVoluntario = () => {
         <Header />
       </header>
       <main className='perfil-content'>
-        <h1>Perfil do Voluntário</h1>
+        <h1>👤 Perfil do Voluntário</h1>
         <p>Bem-vindo! Aqui você poderá acompanhar suas vagas e pontuação.</p>
-        <p><strong>Pontuação:</strong> {pontuacao} pontos</p>
-        <br />
-        <h2>Minhas Candidaturas</h2>
+        <div className="pontuacao-box">
+          <p><strong>🏆 Pontuação:</strong> {pontuacao} pontos</p>
+        </div>
+        <h2>📋 Minhas Candidaturas</h2>
         {candidaturas.length === 0 ? (
           <p>Você ainda não se candidatou a nenhuma vaga.</p>
         ) : (
