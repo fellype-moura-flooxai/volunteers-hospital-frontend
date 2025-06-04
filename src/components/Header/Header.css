@@ -148,6 +148,7 @@
     }
 
     .side-menu {
+        text-align: center;
         position: fixed;
         top: 12vh;
         right: -100%;
@@ -209,6 +210,7 @@
             transition: right 0.3s ease;
             z-index: 999;
             padding: 2rem 1rem;
+            text-align: center;
         }
 
         .side-menu.aberto {

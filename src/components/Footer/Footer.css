@@ -144,7 +144,7 @@ address {
 
     .footer-mobile {
         display: block;
-        height: 80vh;
+        height: 700px;
         width: 100%;
         background: linear-gradient(#002352, #0b3975);
         color: black;
@@ -220,14 +220,15 @@ address {
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .footer-desktop {
         display: none;
     }
 
     .footer-mobile {
         display: block;
-        height: 60vh;
+        max-height: 600px;
+        height: 85vh;
         width: 100%;
         background: linear-gradient(#002352, #0b3975);
         color: black;
@@ -291,7 +292,7 @@ address {
     }
 
     .copyright {
-        height: 50px;
+        height: 60px;
         color: white;
         background: #0b3975;
         font-size: 10px;
