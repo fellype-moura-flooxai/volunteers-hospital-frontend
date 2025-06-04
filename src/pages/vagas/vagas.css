@@ -6,6 +6,15 @@
     min-height: 40vh;
 }
 
+.texto-encorajamento {
+    font-size: 1rem;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+    line-height: 1.5;
+}
+
 .lista-vagas {
     list-style: none;
     padding: 0;

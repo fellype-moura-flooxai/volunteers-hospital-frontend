@@ -16,7 +16,7 @@ const Footer = () => (
                 <img src="/logo.png" alt="logo do hospital" className='logo-img-footer' />
                 <div className='endereco-text'>
                     <address>
-                        Rua Doutor sla oq tanto faz, 123<br />
+                        Rua Doutor coloque seu endereco, 123<br />
                         Santos/SP<br />
                         Cep 123456789
                     </address>
@@ -33,7 +33,29 @@ const Footer = () => (
                 <a href="/"><h4>Seja Voluntario</h4></a>
                 <br />
                 <p>Cada gesto importa. Vamos juntos cuidar de quem precisa</p>
-                <button className='btnSaibaMais'>Saiba Mais</button>
+                <br />
+                <a href="/vagas">
+                    <button className='btnSaibaMais'>Quero Ajudar</button>
+                </a>
+            </section>
+
+            <section className="footer-extra">
+                <div className="footer-links">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="/politica">Política de Privacidade</a></li>
+                        <li><a href="/termos">Termos de Uso</a></li>
+                        <li><a href="/contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div className="footer-newsletter">
+                    <h4>Receba novidades</h4>
+                    <form onSubmit={(e) => e.preventDefault()}>
+                        <input type="email" placeholder="Seu e-mail" required />
+                        <button type="submit">Inscrever</button>
+                    </form>
+                </div>
             </section>
         </footer>
 
@@ -69,6 +91,25 @@ const Footer = () => (
                     , height: '25px', color: '#fff'
                 }} /></a>
             </div>
+
+            <section className="footer-extra">
+                <div className="footer-links">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="/politica">Política de Privacidade</a></li>
+                        <li><a href="/termos">Termos de Uso</a></li>
+                        <li><a href="/contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div className="footer-newsletter">
+                    <h4>Receba novidades</h4>
+                    <form onSubmit={(e) => e.preventDefault()}>
+                        <input type="email" placeholder="Seu e-mail" required />
+                        <button type="submit">Inscrever</button>
+                    </form>
+                </div>
+            </section>
 
         </footer>
         <div className='copyright'>

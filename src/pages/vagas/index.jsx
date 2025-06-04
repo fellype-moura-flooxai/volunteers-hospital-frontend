@@ -69,6 +69,10 @@ export default function Vagas() {
             <main className="vagas-content">
                 <h2>Vagas disponíveis para voluntários.</h2>
                 <br />
+                <p className="texto-encorajamento">
+                    💙 Ajude a transformar vidas seja parte de algo maior! Cadastre-se como voluntário e traga esperança para quem mais precisa. <br />
+                    <em>Seu tempo pode fazer toda a diferença.</em>
+                </p>
                 {erro && <p className="erro">{erro}</p>}
 
                 {vagas.length === 0 ? (

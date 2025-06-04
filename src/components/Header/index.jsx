@@ -46,7 +46,7 @@ const Header = () => {
                 <ul className='top-bar-list'>
                     <li>13 912345678</li>
                     <li><a href="/">ouvidoria@medvida.org.br</a></li>
-                    <li><a href="/">como chegar</a></li>
+                    <li><a href="https://maps.app.goo.gl/DHQBeqExbiePy3qw5">como chegar</a></li>
                 </ul>
             </div>
 
