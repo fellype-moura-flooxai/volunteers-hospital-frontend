@@ -76,6 +76,11 @@
     color: #721c24;
 }
 
+.status.concluida {
+    background-color: #89daff;
+    color: #1d0475;
+}
+
 .pontuacao-box {
   background-color: #f1f8ff;
   border: 1px solid #b6d4fe;

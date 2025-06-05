@@ -80,16 +80,27 @@ export default function CandidaturasVaga() {
                             <li key={c.id}>
                                 <p><strong>Nome:</strong> {c.nome}</p>
                                 <p><strong>Email:</strong> {c.email}</p>
-                                <p><strong>Status:</strong> <span className={`status ${c.status}`}>{c.status}</span></p>
-                                <p><strong>Data:</strong> {new Date(c.data_candidatura).toLocaleDateString()}</p>
-                                <div className="botoes-admin">
-                                    <button onClick={() => atualizarStatus(c.candidatura_id, 'aceita')}>Aceitar</button>
-                                    <button onClick={() => atualizarStatus(c.candidatura_id, 'rejeitada')}>Rejeitar</button>
-                                    {c.status === 'aceita' && (
-                                        <button onClick={() => concluirCandidatura(c.candidatura_id)}>Concluir</button>
+                                <p>
+                                    <strong>Status:</strong>{" "}
+                                    {c.concluida === 1 ? (
+                                        <span className="status concluida">Concluída</span>
+                                    ) : (
+                                        <span className={`status ${c.status}`}>{c.status}</span>
                                     )}
-
+                                </p>
+                                <p><strong>Data da de inscrição para vaga:</strong> {new Date(c.data_candidatura).toLocaleDateString()}</p>
+                                <div className="botoes-admin">
+                                    {c.concluida !== 1 && (
+                                        <>
+                                            <button onClick={() => atualizarStatus(c.candidatura_id, 'aceita')}>Aceitar</button>
+                                            <button onClick={() => atualizarStatus(c.candidatura_id, 'rejeitada')}>Rejeitar</button>
+                                            {c.status === 'aceita' && (
+                                                <button onClick={() => concluirCandidatura(c.candidatura_id)}>Concluir</button>
+                                            )}
+                                        </>
+                                    )}
                                 </div>
+
                             </li>
                         ))}
                     </ul>

@@ -65,10 +65,12 @@
 }
 
 .mensagem-vaga {
-    margin-top: 10px;
-    color: #007bff;
-    font-weight: 500;
-    font-size: 14px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #28a745;
+  background-color: #e6f4ea;
+  padding: 8px 12px;
+  border-radius: 6px;
 }
 
 .erro {

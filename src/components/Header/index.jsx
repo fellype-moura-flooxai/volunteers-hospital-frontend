@@ -14,7 +14,7 @@ const Header = () => {
         const atualizarDados = () => {
             const token = localStorage.getItem('token')
             const nome = localStorage.getItem('nome')
-            const tipo = (localStorage.getItem('tipo_usuario') || '').trim()
+            const tipo = (localStorage.getItem('tipoUsuario') || '').trim()
 
             if (token) {
                 setLogado(true)
@@ -69,11 +69,10 @@ const Header = () => {
                         )}
 
                         {logado && tipoUsuario === 'voluntario' && (
-                            <li><a href="/perfil">Área do Voluntário</a></li>
-                        )}
-
-                        {logado && tipoUsuario === 'voluntario' && (
-                            <li><a href="/ranking">Ranking</a></li>
+                            <>
+                                <li><a href="/perfil">Área do Voluntário</a></li>
+                                <li><a href="/ranking">Ranking</a></li>
+                            </>
                         )}
 
                         {!logado && <li><a href="/login">Login</a></li>}
@@ -108,11 +107,10 @@ const Header = () => {
                     )}
 
                     {logado && tipoUsuario === 'voluntario' && (
-                        <li><a href="/perfil">Área do Voluntário</a></li>
-                    )}
-
-                    {logado && tipoUsuario === 'voluntario' && (
-                        <li><a href="/ranking">Ranking</a></li>
+                        <>
+                            <li><a href="/perfil">Área do Voluntário</a></li>
+                            <li><a href="/ranking">Ranking</a></li>
+                        </>
                     )}
 
                     {!logado && <li><a href="/login">Login</a></li>}

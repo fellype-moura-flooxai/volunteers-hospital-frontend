@@ -71,14 +71,22 @@ const PerfilVoluntario = () => {
             {candidaturas.map((item) => (
               <li key={item.candidatura_id} className="vaga-card">
                 <h3>{item.titulo}</h3>
-                <p><strong>Status:</strong> <span className={`status ${item.status}`}>{item.status}</span></p>
+                <p>
+                  <strong>Status:</strong>{" "}
+                  {item.concluida === 1 ? (
+                    <span className="status concluida">Concluída</span>
+                  ) : (
+                    <span className={`status ${item.status}`}>{item.status}</span>
+                  )}
+                </p>
                 <p><strong>Data:</strong> {new Date(item.data).toLocaleDateString()}</p>
-                <button
-                  className="btn-cancelar"
-                  onClick={() => handleCancelar(item.candidatura_id)}
-                >
-                  Cancelar Candidatura
-                </button>
+                {item.concluida !== 1 && (
+                  <button
+                    className="btn-cancelar"
+                    onClick={() => handleCancelar(item.candidatura_id)}>
+                    Cancelar Candidatura
+                  </button>
+                )}
               </li>
             ))}
           </ul>

@@ -11,20 +11,18 @@ export default function Login() {
   const [senha, setSenha] = useState('');
   const [mensagem, setMensagem] = useState('');
   const navigate = useNavigate();
+  const [isVerifyingLogin, setIsVerifyingLogin] = useState(true);
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    const tipo = localStorage.getItem('tipo_usuario');
+    const tipo = localStorage.getItem('tipoUsuario');
 
     if (token && tipo) {
-      // Já está logado, redireciona
-      if (tipo === 'admin') {
-        navigate('/admin/painel');
-      } else {
-        navigate('/perfil');
-      }
+      navigate(tipo === 'admin' ? '/admin/painel' : '/perfil');
+    } else {
+      setIsVerifyingLogin(false); // só mostra tela de login se não estiver logado
     }
-  }, []);
+  }, [navigate]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -43,7 +41,7 @@ export default function Login() {
         // Salva o token e informações no localStorage
         localStorage.setItem('token', dados.token)
         localStorage.setItem('usuarioId', dados.usuario.id) // ainda pode ser útil
-        localStorage.setItem('tipo_usuario', dados.tipo_usuario)
+        localStorage.setItem('tipoUsuario', dados.tipo_usuario)
         localStorage.setItem('nome', dados.usuario.nome)
 
         window.dispatchEvent(new Event('storage'));
@@ -64,7 +62,7 @@ export default function Login() {
     }
   };
 
-  return (
+  return isVerifyingLogin ? null : (
     <div className='container'>
       <header>
         <Header />

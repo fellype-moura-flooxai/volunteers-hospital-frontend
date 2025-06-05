@@ -6,11 +6,10 @@ export default function useAuthRedirect(tipoEsperado) {
 
     useEffect(() => {
         const token = localStorage.getItem('token')
-        const tipo = localStorage.getItem('tipo_usuario')
+        const tipo = localStorage.getItem('tipoUsuario')
 
-        // Se não tiver token ou tipo incompatível
         if (!token || (tipoEsperado && tipo !== tipoEsperado)) {
-            navigate('/login')
+            navigate('/login', { replace: true })
         }
     }, [navigate, tipoEsperado])
 }
