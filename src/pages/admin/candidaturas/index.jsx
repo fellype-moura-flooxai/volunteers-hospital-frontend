@@ -92,8 +92,12 @@ export default function CandidaturasVaga() {
                                 <div className="botoes-admin">
                                     {c.concluida !== 1 && (
                                         <>
-                                            <button onClick={() => atualizarStatus(c.candidatura_id, 'aceita')}>Aceitar</button>
-                                            <button onClick={() => atualizarStatus(c.candidatura_id, 'rejeitada')}>Rejeitar</button>
+                                            {c.status !== 'aceita' && (
+                                                <button onClick={() => atualizarStatus(c.candidatura_id, 'aceita')}>Aceitar</button>
+                                            )}
+                                            {c.status !== 'rejeitada' && (
+                                                <button onClick={() => atualizarStatus(c.candidatura_id, 'rejeitada')}>Rejeitar</button>
+                                            )}
                                             {c.status === 'aceita' && (
                                                 <button onClick={() => concluirCandidatura(c.candidatura_id)}>Concluir</button>
                                             )}

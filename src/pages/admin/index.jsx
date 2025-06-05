@@ -28,11 +28,11 @@ const PainelAdmin = () => {
           </Link>
 
           <Link to="/admin/gerenciar-vagas">
-            <button className="btn-admin-gerenciar">gerenciar vagas</button>
+            <button className="btn-admin-gerenciar">Gerenciar Vagas</button>
           </Link>
 
           <Link to="/ranking">
-            <button className="btn-admin-ranking">ver ranking dos voluntarios</button>
+            <button className="btn-admin-ranking">Ver Ranking dos Voluntarios</button>
           </Link>
 
         </div>
