@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './vagas.css'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import ModalMensagem from '../../components/ModalMensagem/ModalMensagem'
 
 export default function Vagas() {
     const [vagas, setVagas] = useState([])
@@ -10,6 +11,7 @@ export default function Vagas() {
     const [mensagens, setMensagens] = useState({})
     const [candidaturas, setCandidaturas] = useState([])
     const tipoUsuario = localStorage.getItem('tipoUsuario')
+    const [modalMensagem, setModalMensagem] = useState('')
 
     // Carrega vagas
     useEffect(() => {
@@ -48,8 +50,8 @@ export default function Vagas() {
     // Candidatar-se
     const handleCandidatar = async (vagaId) => {
         if (!localStorage.getItem('usuarioId')) {
-            alert('Você precisa estar logado para se candidatar.')
-            window.location.href = '/login'
+            setModalMensagem('Você precisa estar logado para se candidatar.')
+            setTimeout(() => window.location.href = '/login', 2000) // redireciona após 2s
             return
         }
 
@@ -166,6 +168,10 @@ export default function Vagas() {
                             )
                         })}
                     </ul>
+                )}
+
+                {modalMensagem && (
+                    <ModalMensagem mensagem={modalMensagem} />
                 )}
             </main>
             <footer>
