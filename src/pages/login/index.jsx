@@ -95,6 +95,9 @@ export default function Login() {
         </form>
 
         {mensagem && <p className="mensagem">{mensagem}</p>}
+        <p className="mensagem-link">
+          Ainda não tem uma conta? <a href="/cadastro">Cadastre-se aqui</a>
+        </p>
       </div>
 
       <footer>

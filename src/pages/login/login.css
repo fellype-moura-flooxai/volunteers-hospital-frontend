@@ -32,6 +32,22 @@ input {
   color: green;
 }
 
+.mensagem-link {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.mensagem-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.mensagem-link a:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 1024px) {
   .login-container {
     margin-top: 30%;

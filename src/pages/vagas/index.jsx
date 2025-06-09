@@ -48,7 +48,8 @@ export default function Vagas() {
     // Candidatar-se
     const handleCandidatar = async (vagaId) => {
         if (!localStorage.getItem('usuarioId')) {
-            setMensagens(prev => ({ ...prev, [vagaId]: 'Você precisa estar logado para se candidatar.' }))
+            alert('Você precisa estar logado para se candidatar.')
+            window.location.href = '/login'
             return
         }
 
